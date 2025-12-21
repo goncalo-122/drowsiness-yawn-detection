@@ -65,15 +65,15 @@ if not cap.isOpened():
 
 print("Webcam successfully opened!")
 
-# ----------------------------- #
-# Main Loop
-# ----------------------------- #
+
 
 while True:
     ok, frame = cap.read()
     if not ok:
         print("ERROR: Could not read frame.")
         break
+
+    
 
     # Display exit instruction
     cv2.putText(frame, "Press C to exit", (10, 30),
